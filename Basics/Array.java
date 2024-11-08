@@ -95,7 +95,7 @@ public class Array {
         // Array of objects
         Student students[] = new Student[2];
         // Or
-        Student stud = new Student();
+        // Student stud = new Student();
         // stud.id = 1; like this we can assign values to the object
 
         students[0] = new Student();
