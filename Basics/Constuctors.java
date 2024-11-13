@@ -10,8 +10,16 @@ class Person {
 
     // parameterized constructor take name and age as parameters
     public Person(String name, int age) {
+        super(); // this will call the default constructor and return a new instance #superclass of that constructor
         this.name = name;
         this.age = age;
+    }
+   
+    // parameterized constructor take name and age as parameters
+    public Person(String name, double age) {
+        this(); // this method is called to call the default constructor means the above constructor is called this also called
+        this.name = name;
+        this.age = (int)age;
     }
 
     public String getName() {
@@ -40,6 +48,11 @@ public class Constuctors {
         // default values by constructor
         System.out.println(p1.getName());
         System.out.println(p1.getAge());
+
+        // and if we just call object 
+        new Person(); // this is called anonymous object
+        // but you can't use this object again every time you have to do 
+        new Person().getName();  
     }
 }
 
