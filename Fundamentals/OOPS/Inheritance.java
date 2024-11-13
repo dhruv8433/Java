@@ -1,9 +1,15 @@
+import tools.VeryAdvanceCalc;
+
+// we use import statements to call specific class. This is usefull for large projects where we have multiple classes and packages and we have to organize them.
+// import tools.VeryAdvanceCalc; -> this statement is used to import VeryAdvanceCalc class from tools package
+// import tools.*; -> this statement is used to import all the classes from tools package
 
 public class Inheritance {
     public static void main(String[] args) {
         VeryAdvanceCalc c = new VeryAdvanceCalc();
 
-        // in advance calc there is no add and sub method but it is inherited from Calc class so we can use it
+        // in advance calc there is no add and sub method but it is inherited from Calc
+        // class so we can use it
         System.out.println(c.add(10, 20));
         System.out.println(c.sub(10, 20));
         System.out.println(c.multiplication(10, 2));
@@ -12,9 +18,12 @@ public class Inheritance {
     }
 }
 
-
-// Inheritance is a mechanism in which one class acquires the property of another class. For example, a child inherits the traits of his/her parents. With inheritance, we can reuse the fields and methods of the existing class.
-// The class which inherits the properties of other is known as subclass (derived class, child class) and the class whose properties are inherited is known as superclass (base class, parent class).
+// Inheritance is a mechanism in which one class acquires the property of
+// another class. For example, a child inherits the traits of his/her parents.
+// With inheritance, we can reuse the fields and methods of the existing class.
+// The class which inherits the properties of other is known as subclass
+// (derived class, child class) and the class whose properties are inherited is
+// known as superclass (base class, parent class).
 
 // Types of Inheritance in Java
 // 1. Single Inheritance
@@ -24,6 +33,11 @@ public class Inheritance {
 // 5. Hybrid Inheritance
 
 // Characteristics of Inheritance
-// 1. Code Reusability: It is the most important benefit of Inheritance. Inheritance allows us to reuse the fields and methods of the existing class.
-// 2. Method Overriding: Inheritance allows us to override the methods of the existing class so that we can define a new behavior to the existing methods.
-// 3. Extensibility: Inheritance is used to create a new class that is built upon an existing class. When we want to create a class that is similar to an existing class except for some modifications, we can derive our new class from the existing class.
+// 1. Code Reusability: It is the most important benefit of Inheritance.
+// Inheritance allows us to reuse the fields and methods of the existing class.
+// 2. Method Overriding: Inheritance allows us to override the methods of the
+// existing class so that we can define a new behavior to the existing methods.
+// 3. Extensibility: Inheritance is used to create a new class that is built
+// upon an existing class. When we want to create a class that is similar to an
+// existing class except for some modifications, we can derive our new class
+// from the existing class.
