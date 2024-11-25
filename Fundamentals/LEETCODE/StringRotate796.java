@@ -3,7 +3,7 @@
  * URL: https://leetcode.com/problems/rotate-string/description/
  */
 
-public class StringRotate {
+public class StringRotate796 {
     public boolean rotateString(String s, String goal) {
         if (s.length() != goal.length()) {
             return false;
@@ -15,7 +15,7 @@ public class StringRotate {
     }
 
     public static void main(String[] args) {
-        StringRotate sr = new StringRotate();
+        StringRotate796 sr = new StringRotate796();
         System.out.println(sr.rotateString("abcde", "deabc"));
     }
 }
