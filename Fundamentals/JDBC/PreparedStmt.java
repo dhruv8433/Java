@@ -13,7 +13,7 @@ public class PreparedStmt {
             
             // second row
             stmt.setInt(1, 1);
-            stmt.setString(2, "Rni");
+            stmt.setString(2, "User 2");
             stmt.setInt(3, 20);
 
             int i = stmt.executeUpdate();

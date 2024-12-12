@@ -10,7 +10,7 @@ class Insertion {
 			// inserting data to the database
 
 			System.out.println("Inserting records into the table...");
-			String sql = "INSERT INTO Registration VALUES (100, 'Zara', 'Ali', 18)";
+			String sql = "INSERT INTO Registration VALUES (100, 'XYZ', 'User', 18)";
 			stmt.executeUpdate(sql);
 
 			con.close();
