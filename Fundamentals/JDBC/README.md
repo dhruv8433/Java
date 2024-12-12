@@ -21,7 +21,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 1. Clone the repository:
 
-   ```git clone https://github.com/dhruv8433/Java-JDBC/```
+   ```git clone https://github.com/dhruv8433/Java/```
 
 2. Import the project into your IDE.
 
@@ -38,6 +38,7 @@ Modify the provided Java classes according to your database schema and requireme
 - `ConnectionDb.java`: Establishes a connection to the database.
 - `Insertion.java, Deletion.java`: Data Access Object for performing CRUD operations on the `Registation` table.
 - `DisplayTable.java`: Model class representing a user entity.
+- `Crud.java`: All CRUD(CREATE, READ, UPDATE, DELETE) operations.
 
 Feel free to extend and customize the codebase to suit your needs!
 
