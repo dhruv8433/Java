@@ -25,7 +25,7 @@ public class AddServlet extends HttpServlet {
 		out.print("<html>");
 			out.print("<body>");
 				out.print("<h1>");
-				out.print(addition);
+				out.print("Result is : "+addition); 
 				out.print("</h1>");
 			out.print("</body>");
 		out.print("</html>");
