@@ -30,4 +30,14 @@ public class AddServlet extends HttpServlet {
 			out.print("</body>");
 		out.print("</html>");
 	}
+	
+	//	this will only accept post method - to send data to server
+	//	public void doPost(HttpServletRequest req, HttpServletResponse res) {
+	//		System.out.println("Inside Post Method");
+	//	}
+	
+	//	this will only accept Get method - to fetch data from server
+	//	public void doGet(HttpServletRequest req, HttpServletResponse res) {
+	//		System.out.println("Inside Get Method");
+	//	}
 }
