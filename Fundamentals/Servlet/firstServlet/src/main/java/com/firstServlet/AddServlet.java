@@ -12,7 +12,7 @@ import javax.servlet.http.*;
 
 public class AddServlet extends HttpServlet {
 	//servlet is server and it use service method -- life cycle method
-	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 		// by default getparameter give string value so we have to convert it into integer by type-casting
 		int i = Integer.parseInt(req.getParameter("num1"));
 		int j = Integer.parseInt(req.getParameter("num2"));
@@ -35,10 +35,10 @@ public class AddServlet extends HttpServlet {
 		// we can call different servlet class using 2 method
 		// 1. Request Dispatcher
 		// 2. Redirect
-		
+		req.setAttribute("sum", addition);
 		// using req dispatcher also we have to throw if any exception occure at servlet also we have to mention new servler in web.xml 
-		RequestDispatcher rd = req.getRequestDispatcher("sqt");
-		// whenever req come to /sqt call SqtServlet -- defined in xml
+		RequestDispatcher rd = req.getRequestDispatcher("sqrtNum");
+		// whenever req come to /sqrt call SqrtServlet -- defined in xml
 		rd.forward(req, res);
 	}
 	
