@@ -7,12 +7,19 @@ import java.io.PrintWriter;
 
 import javax.servlet.http.*;
 
-public class SqtServlet extends HttpServlet {
+public class SqrtServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
-		System.out.println("Inside Get Method");
+		
+		// fetching sum from servlet 1 
+		int sum = (int) req.getAttribute("sum");
 		
 		PrintWriter out = res.getWriter();
-		out.print("Welcome to sqtServlet");
+		out.println("Welcome to sqrtServlet");
+		
+		out.println("Sum :" + sum );
+		
+		sum *= sum;
+		out.println("Sqrt is: " + sum );
 		
 	}
 }
