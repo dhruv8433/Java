@@ -5,12 +5,14 @@ import javax.servlet.http.HttpServlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 // for servlet req and res
 import javax.servlet.http.*;
 
 public class AddServlet extends HttpServlet {
 	//servlet is server and it use service method -- life cycle method
-	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException {
+	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 		// by default getparameter give string value so we have to convert it into integer by type-casting
 		int i = Integer.parseInt(req.getParameter("num1"));
 		int j = Integer.parseInt(req.getParameter("num2"));
@@ -29,6 +31,15 @@ public class AddServlet extends HttpServlet {
 				out.print("</h1>");
 			out.print("</body>");
 		out.print("</html>");
+		
+		// we can call different servlet class using 2 method
+		// 1. Request Dispatcher
+		// 2. Redirect
+		
+		// using req dispatcher also we have to throw if any exception occure at servlet also we have to mention new servler in web.xml 
+		RequestDispatcher rd = req.getRequestDispatcher("sqt");
+		// whenever req come to /sqt call SqtServlet -- defined in xml
+		rd.forward(req, res);
 	}
 	
 	//	this will only accept post method - to send data to server

@@ -13,4 +13,16 @@
  		<servlet-name>add</servlet-name>
  		<url-pattern>/add</url-pattern>
  	</servlet-mapping>
+ 	
+ 	<!-- Severt 2: Sqroot of number -->
+ 	<servlet>
+ 		<servlet-name>sqt</servlet-name>
+ 		<!-- we have to provide fully qualified class name wit package name -->
+ 		<servlet-class>com.firstServlet.SqtServlet</servlet-class>
+ 	</servlet>
+ 	
+ 	<servlet-mapping>
+ 		<servlet-name>sqt</servlet-name>
+ 		<url-pattern>/sqt</url-pattern>
+ 	</servlet-mapping>
 </web-app>
