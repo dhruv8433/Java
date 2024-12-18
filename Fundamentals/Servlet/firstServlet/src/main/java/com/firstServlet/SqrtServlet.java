@@ -11,7 +11,8 @@ public class SqrtServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		
 		// fetching sum from servlet 1 
-		int sum = (int) req.getAttribute("sum");
+		// int sum = (int) req.getAttribute("sum");  // REQUEST DISPATCHER METHOD
+		int sum = Integer.parseInt(req.getParameter("sum"));
 		
 		PrintWriter out = res.getWriter();
 		out.println("Welcome to sqrtServlet");
@@ -20,6 +21,9 @@ public class SqrtServlet extends HttpServlet {
 		
 		sum *= sum;
 		out.println("Sqrt is: " + sum );
+		
+		// 2. Redirect Method
+		System.out.print("SQRT called");
 		
 	}
 }
