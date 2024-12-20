@@ -36,13 +36,21 @@ public class AddServlet extends HttpServlet {
 		// 1. Request Dispatcher
 		// 2. Redirect
 		// using req dispatcher also we have to throw if any exception occure at servlet also we have to mention new servler in web.xml 
-		//		req.setAttribute("sum", addition);
-		//		RequestDispatcher rd = req.getRequestDispatcher("sqrtNum");
+				req.setAttribute("sum", addition);
+				RequestDispatcher rd = req.getRequestDispatcher("sqrtNum");
 		// whenever req come to /sqrt call SqrtServlet -- defined in xml
-		//		rd.forward(req, res);
+				rd.forward(req, res);
+		
+		
+		// 3. Session management
+//		HttpSession session = req.getSession();
+//		session.setAttribute("sum", addition);   // set attribute in sessin
+		
+		Cookie cookie = new Cookie("sum", addition + "");
+		res.addCookie(cookie);
 		
 		//2. Redirect
-		res.sendRedirect("sqrtNum?sum="+addition);   // URL Rewriting
+		res.sendRedirect("sqrtNum");   // URL Rewriting
 		   
 	}
 	
