@@ -18,9 +18,11 @@
 try{	
 	
 	Class.forName("com.mysql.cj.jdbc.Driver");
-	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/db", "root", "");
+	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3307/db", "root", "");
 	
 	out.print("Db Connected");
+	
+	
 	Statement stmt = con.createStatement();
 	
 	String Sql = "select * from test";
