@@ -18,17 +18,17 @@ public class Login extends HttpServlet {
 		String uname = request.getParameter("uname");
 		String password = request.getParameter("pass");
 		
-		if(uname.equals("dhruv") && password.equals("1234")) {
+		if(uname.equals("dhruv") && password.equals("123456789")) {
 			// if user is logged in set it into session
 			HttpSession session = request.getSession();
 			session.setAttribute("uname", uname);
 			session.setAttribute("password", password);
 			
 			// redirect to welcome page
-			response.sendRedirect("welcome.jsp");
+			response.sendRedirect("validatePassword");
 		}else {
 			// if credential is wrong, than redirect back to login
-			response.sendRedirect("login.jsp");
+			response.sendRedirect("login.jsp ");
 		}
 		
 	}
