@@ -9,8 +9,6 @@ This is a demonstration project to learn and showcase the basics of Hibernate OR
 - [Technologies Used](#technologies-used)
 - [Setup Instructions](#setup-instructions)
 - [Hibernate Configuration](#hibernate-configuration)
-- [Entity Class](#entity-class)
-- [Main Application Code](#main-application-code)
 
 ---
 
