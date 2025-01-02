@@ -1,7 +1,9 @@
 package com.hibernate.DemoHibernatee;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Transient;
 
 /**
  * This is a Hibernate Entity class representing the Alien table in the database.
@@ -16,8 +18,10 @@ public class Alien { // This is a POJO (Plain Old Java Object) representing the 
 	// @Id annotation marks this field as the primary key for the table.
 	@Id
 	private int aid; // Alien ID (Primary Key)
-
+	
+	//	@Column(name="alien_name") this annotation used to change column name in db instead of aname
 	private String aname; // Alien name
+	// @Transient will not store color in db
 	private String color; // Alien color
 
 	/**
