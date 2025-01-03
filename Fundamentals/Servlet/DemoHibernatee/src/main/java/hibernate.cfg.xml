@@ -54,5 +54,10 @@
             Set to "true" to see the generated SQL queries.
         -->
         <property name="show_sql">true</property>
+        
+        <property name="hibernate.format_sql">true</property>
+        
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        <!--   <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>-->
     </session-factory>
 </hibernate-configuration>
