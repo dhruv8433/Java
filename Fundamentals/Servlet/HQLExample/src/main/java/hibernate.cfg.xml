@@ -1,0 +1,60 @@
+<!DOCTYPE hibernate-configuration PUBLIC 
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!-- 
+    Root element of the Hibernate configuration file. 
+    It defines the configuration and mapping details for Hibernate. 
+-->
+<hibernate-configuration>
+    <!-- 
+        The session-factory element is the central configuration section for Hibernate. 
+        It contains all the database connection details, Hibernate properties, and mappings.
+    -->
+    <session-factory>
+        <!-- 
+            Specifies the JDBC driver class for connecting to the database.
+            com.mysql.cj.jdbc.Driver is the driver class for MySQL 8 and above.
+        -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        
+        <!-- 
+            JDBC URL to connect to the database. 
+            Replace "db" with your actual database name.
+        -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/db</property>
+        
+        <!-- 
+            Database username for authentication.
+            Replace "root" with your database username if different.
+        -->
+        <property name="hibernate.connection.username">root</property>
+        
+        <!-- 
+            Database password for authentication. 
+            Replace "12345" with the actual password of your database user.
+        -->
+        <property name="hibernate.connection.password">12345</property>
+        
+        <!-- 
+            Hibernate dialect specifies the SQL dialect to use. 
+            Here, org.hibernate.dialect.MySQLDialect is used for MySQL databases.
+        -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        
+        <!-- 
+            hbm2ddl.auto property is used to manage the database schema.
+            - "update": Updates the database schema based on your entity classes.
+            - Other options: "create", "create-drop", "validate", "none".
+            Use "update" cautiously in production environments.
+        -->
+        <property name="hbm2ddl.auto">update</property>
+        
+        <!-- 
+            Enables SQL logging in the console. 
+            Set to "true" to see the generated SQL queries.
+        -->
+        <property name="show_sql">true</property>
+        
+        <!--   <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>-->
+    </session-factory>
+</hibernate-configuration>
