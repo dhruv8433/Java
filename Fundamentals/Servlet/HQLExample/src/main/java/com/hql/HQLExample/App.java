@@ -27,7 +27,7 @@ public class App
 		// - The Session object is the interface between the application and the
 		// database.
 		Session session = sf.openSession();
-		
+//		
 //		for (int i = 0; i < 50; i ++) {
 //			Alien a1 = new Alien();
 //			a1.setAid(i);
@@ -54,12 +54,12 @@ public class App
 		System.out.print(uniq);
 		
 //		for(Alien a : aliens) {
-//			System.out.print(a);
+//			System.out.println(a);
 //		}
 
 		// Native Queries
 //		SQLQuery query = session.createSQLQuery("select name, marks from student where marks>60"); 
-//		query.setResultTransformer (Criteria. ALIAS_TO_ENTITY_MAP);
+//		query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
 //		for(Object o: students)
 //		{
 //			Map m = (Map)o;
