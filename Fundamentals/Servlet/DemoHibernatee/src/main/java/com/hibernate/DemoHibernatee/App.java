@@ -63,12 +63,13 @@ public class App {
 
 		// The session and factory should ideally be closed after use to release
 		// resources.
-		// session.close();
 		// sf.close();
 		
 		// 2. Getting data from session
 		a1 = session.get(Alien.class, 110);
-
+//		session.close();
+		a1 = session.get(Alien.class, 110);
+		
 		// Try to print database values
 		System.out.print(a1);
 		
