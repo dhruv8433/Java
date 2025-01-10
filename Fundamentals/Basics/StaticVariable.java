@@ -35,7 +35,6 @@ class Mobiles {
 
 public class StaticVariable {
     public static void main(String[] args) throws ClassNotFoundException {
-
         // if we don't want to create object of the class and just call the class
         // without creating object
         // then we can use Class and for that we have to throw ClassNotFoundException

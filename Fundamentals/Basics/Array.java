@@ -55,7 +55,7 @@ public class Array {
         System.out.println("Enhanced for loop");
 
         // or we can use enhanced for loop
-        for (int[] row : arr4) {
+        for (int[] row : arr4) { 
             for (int col : row) {
                 System.out.print(col + " ");
             }

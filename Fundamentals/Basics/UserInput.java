@@ -15,8 +15,8 @@ public class UserInput {
             // or
             InputStreamReader reader = new InputStreamReader(System.in);
 
-            int num = Integer.parseInt(buffer.readLine()); // readLine() method is used to read a line of text from the
             buffer = new BufferedReader(reader); // console and it is bydefault give string so we have to parse it
+            int num = Integer.parseInt(buffer.readLine()); // readLine() method is used to read a line of text from the
             // into integers
 
             System.out.println("User Input: " + num);

@@ -10,7 +10,7 @@ class Basic {
         // variable's #scope gloable
 
         int temp = 10;
-        float percentage = 1.0f;
+        float percentage = 1.0;
 
         float total = (temp + percentage);
 
@@ -28,7 +28,7 @@ class Basic {
         } else if (y > z) { // we are not compile xy > x because we already check x > y and it false than
                             // only it come here to check y > z
             System.out.println("y is gretest" + y);
-        } else {
+        } else {                              
             System.out.println("z is gretest" + z);
         }
 
@@ -74,7 +74,7 @@ class Basic {
         } while (i > 20);
 
         // loop -- for
-        for (int k = 1; k <= 9; k++) {
+        for (int k = 1; k <= 7; k++) {
             System.out.println("Day : " + k);
             for (int t = 1; t <= 9; t++) {
                 // in this we have to put (t+8) because it bydefault add with string

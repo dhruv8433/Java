@@ -51,10 +51,10 @@ public class JavaCollections {
         numSet.add(3);
         numSet.add(3);
 
-        // for (Object n : numSet) {
-        // int num = (Integer) n;
-        // System.out.println(num);
-        // }
+        for (Object n : numSet) {
+        int num = (Integer) n;
+        System.out.println(num);
+        }
 
         // we can also print using iterators
         System.out.println("using iterators");

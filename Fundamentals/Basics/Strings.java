@@ -6,6 +6,9 @@ public class Strings {
         String name = new String("xyz");
         System.out.println("hello " + name);
 
+        // name = "abv";
+        // System.out.println("hello " + name); 
+
         // hashcode() method
         System.out.println(name.hashCode());
 
@@ -34,12 +37,12 @@ public class Strings {
 
         // startsWith() and endsWith() methods - checks if the string starts or ends
         // with the specified substring
-        System.out.println(name.startsWith("x"));
+        System.out.println(name.startsWith("z"));
         System.out.println(name.endsWith("z"));
 
         // equals() and equalsIgnoreCase() methods - checks if the string is equal to
         // the specified string
-        System.out.println(name.equals("xyz"));
+        System.out.println(name.equals("xYz"));
         System.out.println(name.equalsIgnoreCase("XYZ"));
 
         // String concatenation
@@ -48,10 +51,10 @@ public class Strings {
 
         // bydefault, the string is immutable in Java means that it cannot be changed
         // for mutable string, we can use StringBuffer or StringBuilder
-        StringBuffer sb = new StringBuffer("abc");
+        StringBuffer sb = new StringBuffer("abc"); // original string abc append def 
         sb.append("def");
         System.out.println(sb);
-        System.out.println("capacity of string buffer is " + sb.capacity());
+        System.out.println("capacity of string buffer is" + sb.capacity());
 
         // delete and insert methods
         sb.delete(1, 3);
