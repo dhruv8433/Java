@@ -3,22 +3,28 @@
  * URL: https://leetcode.com/problems/reverse-string/description
  */
 
-import java.util.Arrays;
 
 public class StringReverse344 {
-    public void reverseString(char[] s) {
-        char[] reversedString = new char[s.length];
-        for (int i = s.length - 1; i >= 0; i--) {
-            for (int j = 0; j < s.length; j++) {
-                reversedString[j] = s[i];
-                i--;
-            }
+    public void reverseString() {
+        char[] arr = new char[5];
+        char temp;
+        char[] arr2 = new char[5];
+
+        arr[0] = 'h';
+        arr[1] = 'e';
+        arr[2] = 'l';
+        arr[3] = 'l';
+        arr[4] = 'o';
+
+        for(int i = 5; i > 0; i--){
+            temp = arr[i - 1];
+            System.out.println(temp);
+            
         }
-        System.out.println(Arrays.toString(reversedString));
     }
 
     public static void main(String[] args) {
         StringReverse344 s = new StringReverse344();
-        s.reverseString(new char[] { 'h', 'e', 'l', 'l', 'o' });
+        s.reverseString();
     }
 }
