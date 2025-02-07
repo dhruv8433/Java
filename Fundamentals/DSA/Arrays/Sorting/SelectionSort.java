@@ -7,7 +7,7 @@ public class SelectionSort {
         for (int i = 0; i < arr.length; i++) {
             int min = i;
             for (int j = i + 1; j < arr.length; j++) {
-                System.out.println((j < arr.length)+" for index"+j+" "+arr[j]);
+                System.out.println((j < arr.length) + " for index" + j + " " + arr[j]);
                 if (arr[j] < arr[min]) {
                     min = j;
                 }
