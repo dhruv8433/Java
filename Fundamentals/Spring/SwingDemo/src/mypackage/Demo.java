@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.Color;
 
 public class Demo extends JFrame {
 
@@ -42,7 +43,8 @@ public class Demo extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setForeground(Color.PINK);
+		contentPane.setBackground(Color.ORANGE);
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
