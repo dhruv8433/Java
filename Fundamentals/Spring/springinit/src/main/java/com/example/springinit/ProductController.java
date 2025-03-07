@@ -1,6 +1,5 @@
 package com.example.springinit;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,15 +28,16 @@ public class ProductController {
 
     // Get Request for getting all products
     @GetMapping()
-    public List<Product> getAllProducts() {
-        return productRepository.findAll(); // return all products
+    public List<ProductDTO> getAllProducts() {
+        return productRepository.findAll().stream().map(product -> new ProductDTO(product.getId(), product.getName(), product.getPrice())).toList(); // return all products
     }
 
     // Get Product by ID
     @GetMapping("/{id}")
     public Product getProductById(@PathVariable int id) {
 
-        return productRepository.findById(id).orElse(null); // return product by id
+        return productRepository.findById(id)
+                .orElseThrow(() -> new ProductNotFound("Product with id " + id + " not found!!")); // return product by id
 
         // return products.stream()
         // .filter(product -> product.getId() == id)
