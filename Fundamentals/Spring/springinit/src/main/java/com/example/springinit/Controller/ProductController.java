@@ -1,9 +1,14 @@
-package com.example.springinit;
+package com.example.springinit.Controller;
 
 import java.util.List;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.springinit.model.ProductDTO;
+import com.example.springinit.repository.ProductRepository;
+import com.example.springinit.error.ProductNotFound;
+import com.example.springinit.model.Product;
 
 import jakarta.validation.Valid;
 
