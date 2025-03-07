@@ -1,4 +1,4 @@
-package com.example.springinit;
+package com.example.springinit.error;
 
 // class that handle product not found exception
 public class ProductNotFound extends RuntimeException {

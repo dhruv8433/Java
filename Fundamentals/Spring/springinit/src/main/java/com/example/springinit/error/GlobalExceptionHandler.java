@@ -1,4 +1,4 @@
-package com.example.springinit;
+package com.example.springinit.error;
 
 import java.util.HashMap;
 import java.util.Map;
