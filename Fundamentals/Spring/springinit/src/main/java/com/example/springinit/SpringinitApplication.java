@@ -2,8 +2,10 @@ package com.example.springinit;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = "com.example.springinit.security")
 public class SpringinitApplication {
 
 	public static void main(String[] args) {
