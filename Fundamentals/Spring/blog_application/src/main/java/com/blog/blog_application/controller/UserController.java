@@ -15,7 +15,7 @@ import jakarta.validation.Valid;
 
 
 @RestController
-@RequestMapping("/api/user") // <--- Ensure this matches the endpoint you are calling
+@RequestMapping("/api/v1/user") // <--- Ensure this matches the endpoint you are calling
 public class UserController {
 
     @Autowired
@@ -28,7 +28,7 @@ public class UserController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<UserDto> updateUser(@PathVariable Integer id, @RequestBody UserDto userDto) {
+    public ResponseEntity<UserDto> updateUser(@Valid @PathVariable Integer id, @RequestBody UserDto userDto) {
         UserDto updatedUser = this.userService.UpdateUser(userDto, id);
         return new ResponseEntity<>(updatedUser, HttpStatus.OK);
     }
